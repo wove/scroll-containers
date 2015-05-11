@@ -12,3 +12,5 @@ will remain in view so long as its container does. A container that is the full 
 ensure that the element is always in view.
 
 You can have more than one `.scroll-container` per page, but only one `.scroll-element` per container.
+
+An demonstration with various container and element sizes is available at http://wove.github.io/scroll-containers/
