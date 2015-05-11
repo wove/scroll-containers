@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scroll Containers</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="scrollContainers.js"></script>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            border: 5px solid;
+            margin: 0;
+            font-size: 0;
+        }
+
+        .column {
+            display: inline-block;
+            width: 25%;
+            font-size: 16px;
+        }
+
+        .scroll-container {
+            background: rgb(0,0,0);
+        }
+
+        .scroll-element {
+            border: 5px solid;
+            padding: 20px;
+            background-image: url("bg_1.png"), url("bg_2.png");
+            background-repeat: repeat-x, repeat;
+        }
+
+        .column:first-of-type .scroll-container:first-of-type .scroll-element {
+            background: rgb(200,230,250);
+        }
+
+        .scroll-container.tall {
+            height: 2000px;
+        }
+
+        .scroll-container.med {
+            height: 1000px;
+        }
+
+        .scroll-container.short {
+            height: 500px;
+        }
+
+        .scroll-element.tall {
+            height: 1500px;
+        }
+
+        .scroll-element.med {
+            height: 500px;
+        }
+
+        .scroll-element.short {
+            height: 250px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="column">
+        <div class="scroll-container tall">
+            <div class="scroll-element">
+                <h3>Scroll Containers</h3>
+                <h4>A small script to help with keeping content within the viewport</h4>
+                <p>The motivation for this was to come up with a solution for 'vertical sidebar menus'
+                that are too tall to fit in the viewport. It could be used for any number of other purposes.</p>
+                <p>To use it, just add scrollContainers.js as you would any other script (ensuring that you also 
+                load jQuery first).</p>
+                <p>From there you'll need to add the '.scroll-container' class to a wrapper for the element you want 
+                to keep in view while scrolling, and the '.scroll-element' class to the element itself. The element 
+                will remain in view so long as its container does. A container that is the full height of the page will 
+                ensure that the element is always in view.</p>
+                <p>You can have more than one .scroll-container per page, but only one .scroll-element per container.</p>
+                <p>There are examples on this page of scrollable elements that are taller than the viewport and shorter than
+                the viewport within various container heights. Some elements are within containers that haven't had a height set
+                or where the height of the container is less than the height of the element. The script adds a min-height value
+                equal to the height of the element to all of the containers to ensure they still work as expected.</p>
+            </div>
+        </div>
+        <div class="scroll-container">
+            <div class="scroll-element short">
+            </div>
+        </div>
+        <div class="scroll-container med">
+            <div class="scroll-element med">
+            </div>
+        </div>
+        <div class="scroll-container short">
+            <div class="scroll-element short">
+            </div>
+        </div>
+        <div class="scroll-container med">
+            <div class="scroll-element med">
+            </div>
+        </div>
+        <div class="scroll-container short">
+            <div class="scroll-element short">
+            </div>
+        </div>
+        <div class="scroll-container tall">
+            <div class="scroll-element tall">
+            </div>
+        </div>
+        <div class="scroll-container">
+            <div class="scroll-element short">
+            </div>
+        </div>
+    </div><div class="column">
+        <div class="scroll-container tall">
+            <div class="scroll-element tall">
+            </div>
+        </div>
+        <div class="scroll-container tall">
+            <div class="scroll-element med">
+            </div>
+        </div>
+        <div class="scroll-container med">
+            <div class="scroll-element short">
+            </div>
+        </div>
+        <div class="scroll-container tall">
+            <div class="scroll-element tall">
+            </div>
+        </div>
+        <div class="scroll-container">
+            <div class="scroll-element med">
+            </div>
+        </div>
+    </div><div class="column">
+        <div class="scroll-container short">
+            <div class="scroll-element short">
+            </div>
+        </div>
+        <div class="scroll-container med">
+            <div class="scroll-element med">
+            </div>
+        </div>
+        <div class="scroll-container short">
+            <div class="scroll-element short">
+            </div>
+        </div>
+        <div class="scroll-container tall">
+            <div class="scroll-element tall">
+            </div>
+        </div>
+        <div class="scroll-container med">
+            <div class="scroll-element med">
+            </div>
+        </div>
+        <div class="scroll-container short">
+            <div class="scroll-element short">
+            </div>
+        </div>
+        <div class="scroll-container tall">
+            <div class="scroll-element tall">
+            </div>
+        </div>
+    </div><div class="column">
+        <div class="scroll-container">
+            <div class="scroll-element short">
+            </div>
+        </div>
+        <div class="scroll-container">
+            <div class="scroll-element med">
+            </div>
+        </div>
+        <div class="scroll-container short">
+            <div class="scroll-element short">
+            </div>
+        </div>
+        <div class="scroll-container short">
+            <div class="scroll-element short">
+            </div>
+        </div>
+        <div class="scroll-container tall">
+            <div class="scroll-element med">
+            </div>
+        </div>
+        <div class="scroll-container med">
+            <div class="scroll-element short">
+            </div>
+        </div>
+        <div class="scroll-container tall">
+            <div class="scroll-element tall">
+            </div>
+        </div>
+        <div class="scroll-container">
+            <div class="scroll-element med">
+            </div>
+        </div>
+        <div class="scroll-container">
+            <div class="scroll-element short">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
